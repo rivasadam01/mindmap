@@ -3,11 +3,12 @@
   position: relative;
   max-width: calc(33.33% - 1rem);
   background-color: #000;
-  border: 2px solid #fff;
+  border: 0.5px solid #fff;
   border-radius: 0.5rem;
   padding: 1.5rem;
   box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1),
     0 4px 6px -2px rgba(255, 255, 255, 0.05);
+  min-width: 255px;
 }
 
 .noteTitle {
@@ -23,23 +24,44 @@
   color: #d1d5db;
 }
 
-.noteButton {
-  position: absolute;
-  bottom: -1.2rem;
-  right: 3rem;
+.noteFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
 }
 
-.editButton {
+.noteButtons {
+  display: flex;
+  justify-content: flex-end;
+}
+.noteButton {
+  border-radius: 9999px;
+  border: 1px solid #ffffff;
+  width: 3rem;
+  height: 3rem;
+  padding: 0rem;
   background-color: #030303cc;
   color: #fff;
-  border: 2px solid #fff;
-  border-radius: 9999px;
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
   cursor: pointer;
   transition: background-color 0.4s ease-in-out;
 }
 
-.editButton:hover {
-  background-color: #030303;
+.editButton {
+  border: 1px solid #def701;
+
+  background-color: rgba(222, 241, 18, 0.1);
+}
+
+.whiteIcon {
+  filter: brightness(0) invert(1);
+}
+
+.tagContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
