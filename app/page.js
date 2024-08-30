@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { signIn, signOut, useSession } from "next-auth/react"
 import styles from "./page.module.css"
+import NoteCard from "./components/NoteCard"
 
 export default function Home() {
   const { data: session } = useSession()
@@ -26,20 +27,8 @@ export default function Home() {
         )}
 
         <div className={styles.grid}>
-          <div className={`${styles.noteCard} ${styles.dark}`}>
-            <h2 className={styles.noteTitle}>Note 1</h2>
-            <p className={styles.noteContent}>This is the content of Note 1.</p>
-            {/* Add edit button */}
-            <button className={styles.editButton}>Edit</button>
-          </div>
-          <div className={`${styles.noteCard} ${styles.dark}`}>
-            <h2 className={styles.noteTitle}>Note 2</h2>
-            <p className={styles.noteContent}>This is the content of Note 2.</p>
-            {/* Add edit button */}
-            <button className={(styles.noteButton, styles.editButton)}>
-              Edit
-            </button>
-          </div>
+          <NoteCard title="Note 1" content="This is the content of Note 1." />
+          <NoteCard title="Note 2" content="This is the content of Note 2." />
           {/* Add more note cards as needed */}
         </div>
 
