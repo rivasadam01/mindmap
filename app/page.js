@@ -95,7 +95,7 @@ export default function Home() {
             />
             <NoteCard
               title="Note 2"
-              content="This is the content of Note 2. It contains more information and details about the topic. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              content="This is the content of Note 2. It contains more information and details about the topic. Lorem ipsum dolor sit amet, consectetur adipiscing elit....."
               tags={sampleTags2}
             />
             <NoteCard
@@ -109,8 +109,13 @@ export default function Home() {
               tags={sampleTags4}
             />
             <NoteCard
-              title="Note 5"
+              title="Note 5 - Test"
               content="This is the content of Note 5."
+              tags={sampleTags5}
+            />
+            <NoteCard
+              title="Note 6 - Test"
+              content="This contains a lot of text to test the height of the note card. What is brown and sticky? A stick!"
               tags={sampleTags5}
             />
           </div>
