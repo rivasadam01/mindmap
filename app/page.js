@@ -4,10 +4,11 @@ import { signIn, signOut, useSession } from "next-auth/react"
 import styles from "./page.module.css"
 import NoteCard from "./components/NoteCard"
 import NoteCardNew from "./components/NoteCardNew"
+import AISearch from "./components/AISearch"
 
 export default function Home() {
   const { data: session } = useSession()
-  // Sample tags (you can remove these if you want to keep using props)
+
   const sampleTags1 = [
     {
       name: "Personal",
@@ -83,22 +84,23 @@ export default function Home() {
             <button onClick={() => signIn()}>Sign in</button>
           </>
         )}
+        <AISearch />
         <div className={styles.notesContainer}>
           <div className={styles.grid}>
             <NoteCardNew />
             <NoteCard
               title="Note 1"
-              content="This is the content of Note 1."
+              content="This is the content of Note 1. It contains more information and details about the topic. "
               tags={sampleTags1}
             />
             <NoteCard
               title="Note 2"
-              content="This is the content of Note 2."
+              content="This is the content of Note 2. It contains more information and details about the topic. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
               tags={sampleTags2}
             />
             <NoteCard
               title="Note 3"
-              content="This is the content of Note 3."
+              content="This is the content of Note 3. More content to test the height of the note card. small joke: What do you call fake spaghetti? An impasta!"
               tags={sampleTags3}
             />
             <NoteCard
